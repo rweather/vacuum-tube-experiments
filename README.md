@@ -42,6 +42,21 @@ up a real one on veroboard.  Here is what the real one looks like:
 
 <img alt="Blinky 6AU6 Photo" src="images/Blinky-6AU6-Photo.png" width="860"/>
 
+## Blinky with a 6DJ8 dual triode
+
+Can we do a blinky with one tube?  Yes we can!  The following schematic
+uses a 6DJ8 dual triode (click for a PDF version):
+
+<a href="Blinky_6DJ8/PDF/Blinky_6DJ8.pdf"><img alt="Blinky 6DJ8 Schematic" src="images/Blinky-6DJ8-Schematic.png" width="860"/></a>
+
+Still runs off 12V.  I put a 27 ohm 10 watt resistor in series with the
+heater to drop the heater voltage down to approximately 6V.  A high
+wattage resistor is required because it will get very hot!
+
+Here is what it looks like on a breadboard:
+
+<img alt="Blinky 6DJ8 Photo" src="images/Blinky-6DJ8-Photo.png" width="860"/>
+
 ## License
 
 MIT License
