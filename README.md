@@ -69,6 +69,12 @@ With C1 = C2 = 100nF and R2 = R3 = 10K, I got a frequency of around 480Hz.
 
 The signal oscillates between about 4.5V and 9.5V, measured on the anodes.
 
+With the LED's in-circuit the frequency was roughly 1 / (1.25 * RC) where
+R = R1 + R2 (16.8K in my test circuit).  With the LED removed, the
+frequency was closer to the ideal of 1 / (1.38 * RC) for astable
+multivibrators.  Deviation between the ideal and measured frequency
+was probably due to the 5% tolerance on the resistors I was using.
+
 ## License
 
 MIT License
