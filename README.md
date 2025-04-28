@@ -8,13 +8,13 @@ Many thanks to David Lovett a.k.a Usagi Electric for showing that it
 was possible to operate vacuum tubes (or "valves" as we call them in
 Australia) at low voltage and get useful work out of them.
 
-## Blinky with two 6AU6 Pentodes
+## Blinky with two 6AU6 pentodes
 
 The simplest thing to do with vacuum tubes is blink LED's!  Henri Abraham and
 Eugene Bloch invented an
 <a href="https://en.wikipedia.org/wiki/Multivibrator">astable multivibrator oscillator</a>
 based on two triodes during World War I.
-<a href="https://ik1zyw.blogspot.com/2022/01/abraham-bloch-valve-led-multivibrator.html">This author of this blog post</a>
+<a href="https://ik1zyw.blogspot.com/2022/01/abraham-bloch-valve-led-multivibrator.html">The author of this blog post</a>
 showed how to make a simple Abraham-Bloch blinky that could operate down to
 9V using the tubes they had available.
 
@@ -37,6 +37,10 @@ which time the LED's act a little weird.  It eventually sorts itself out.
 The circuit is very sensitive - touching the components can change the blink
 rate due to the impedance of the human body!
 
+To adjust the blink rate, easiest is to change the value of C1 and C2 to
+something higher or lower.  Alternatively, change R3 and R4.  Higher values
+will blink slower.
+
 I initially prototyped the circuit on a breadboard, and then soldered
 up a real one on veroboard.  Here is what the real one looks like:
 
@@ -56,6 +60,14 @@ wattage resistor is required because it will get very hot!
 Here is what it looks like on a breadboard:
 
 <img alt="Blinky 6DJ8 Photo" src="images/Blinky-6DJ8-Photo.png" width="860"/>
+
+I played around with a number of capacitor and resistor values to
+get a faster oscillator and to see what the waveform looked like.
+With C1 = C2 = 100nF and R2 = R3 = 10K, I got a frequency of around 480Hz.
+
+<img alt="Blinky 6DJ8 Waveform" src="images/Blinky-6DJ8-Waveform.png" width="860"/>
+
+The signal oscillates between about 4.5V and 9.5V, measured on the anodes.
 
 ## License
 
