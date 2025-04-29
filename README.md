@@ -38,8 +38,8 @@ The circuit is very sensitive - touching the components can change the blink
 rate due to the impedance of the human body!
 
 To adjust the blink rate, easiest is to change the value of C1 and C2 to
-something higher or lower.  Alternatively, change R3 and R4.  Higher values
-will blink slower.
+something higher or lower.  Alternatively, change R3 and R4.  Lower values
+will blink faster.
 
 I initially prototyped the circuit on a breadboard, and then soldered
 up a real one on veroboard.  Here is what the real one looks like:
@@ -61,19 +61,28 @@ Here is what it looks like on a breadboard:
 
 <img alt="Blinky 6DJ8 Photo" src="images/Blinky-6DJ8-Photo.png" width="860"/>
 
-I played around with a number of capacitor and resistor values to
-get a faster oscillator and to see what the waveform looked like.
-With C1 = C2 = 100nF and R2 = R3 = 10K, I got a frequency of around 480Hz.
+A contributor on the Usagi Electric Discord server made up this same
+circuit using a 12AX7 dual triode (12V heater) and it blinks!
+For 12V heaters, remove the 10 watt resistor (R5) and run the heater
+directly off the 12V supply.
+
+## Characterising the frequency of the blinky
+
+I played around with a number of capacitor and resistor values on the
+6DJ8 version to get a faster oscillator and to see what the waveform
+looked like.  With C1 = C2 = 100nF and R1 = R4 = 6.8K, R2 = R3 = 10K,
+and the LED's removed, I got a frequency of around 449Hz on the two anodes:
 
 <img alt="Blinky 6DJ8 Waveform" src="images/Blinky-6DJ8-Waveform.png" width="860"/>
 
-The signal oscillates between about 4.5V and 9.5V, measured on the anodes.
+The signal oscillates between about 4V and 11V, measured on the anodes.
 
 With the LED's in-circuit the frequency was roughly 1 / (1.25 * RC) where
 R = R1 + R2 (16.8K in my test circuit).  With the LED removed, the
 frequency was closer to the ideal of 1 / (1.38 * RC) for astable
-multivibrators.  Deviation between the ideal and measured frequency
-was probably due to the 5% tolerance on the resistors I was using.
+multivibrators.  Deviation between the ideal (431Hz) and measured
+frequency (449Hz) was probably due to the 5% tolerance on the resistors
+I was using.
 
 ## License
 
